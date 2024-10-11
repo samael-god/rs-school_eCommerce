@@ -1,0 +1,163 @@
+.grid{
+  display: grid;
+  grid-template-columns: 500px 20px minmax(300px, 1fr);
+  padding: 0 30px;
+
+  column-gap: 10px;
+
+  @media screen and (width <= 1000px) {
+    &{
+      grid-auto-rows: auto;
+      grid-row-gap: 20px;
+      grid-template-columns: 1fr;
+  }
+    
+  }
+}
+
+.wrapper{
+
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+
+  font-weight: 500;
+  font-size: clamp(16px, 2vw, 20px);
+  font-family: Montserrat, sans-serif;
+  line-height: 24px;
+}
+
+.divider{
+  position: relative;
+
+  width: 2px;
+
+  height: 100%;
+
+  background-color: $green;
+}
+
+.gridDividerWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+
+  @media screen and (width <= 1000px) {
+    & {
+      display: none;
+    }
+    
+  }
+}
+
+.divider__leaf{
+  width: 15px;
+  height: 15px;
+}
+
+.rs__logo {
+  width: 200px;
+
+  margin-bottom: 20px;
+
+  filter: invert(1);
+
+  transition: .3s;
+
+  animation: rotate linear both;
+  animation-duration: 1s;
+
+  &:hover{
+    transition: .3s;
+    scale: 1.1;
+  }
+}
+
+.rs__text{
+  flex: 1;
+  min-width: 250px;
+}
+
+.gridDescription{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+
+  @media screen and (width <= 1000px) {
+    &{
+      padding-bottom: 20px;
+      border-bottom: 2px solid white;
+    }
+  }
+}
+
+.rs__wrapper{
+  width: 350px;
+
+  @media screen and (width <= 1000px) {
+    &{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      column-gap: 40px;
+    }
+  }
+
+}
+
+.title{
+  color: $green;
+  font-weight: 700;
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: normal;
+}
+
+.gridInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.highlight__green{
+  color: $green;
+  font-weight: 600;
+}
+
+.additionalText {
+  color: $gray;
+  font-size: .9em;
+}
+
+.logo{
+  width: fit-content;
+
+  &:hover {
+    transform: none;
+
+    transition: .3s;
+  }
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-x: clip;
+}
+
+.center{
+  text-align: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+

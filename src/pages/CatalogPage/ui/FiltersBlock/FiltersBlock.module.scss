@@ -1,0 +1,97 @@
+.FiltersBlock {
+  position: relative;
+
+  padding: 60px 30px 0;
+}
+  
+.wrapper {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px; 
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+.sub_wrapper {
+  @include flex(center, center, row, 20px);
+}
+
+.leftLeaf {
+  position: absolute;
+  left: 0;
+}
+
+.rightLeaf {
+  position: absolute;
+  top: 80%;
+  right: 0;
+
+  transform: rotate(180deg);
+}
+
+.card {
+  justify-content: center;
+  width: 210px;
+  height: 210px;
+
+  @include montserrat(26px, 500, 30px); 
+}
+
+.allProducts {
+  align-self: flex-start
+}
+
+.category {
+  @include flex(center, center, column, 20px);
+}
+
+.subcategory {
+  width: 100px;
+  height: 100px;
+
+  @include montserrat(20px, 400, 24px); 
+}
+
+.card img {
+  width: 80px;
+}
+
+.link {
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.input {
+  margin-bottom: 30px;
+  padding: 10px 10px 10px 40px;
+  border: 3px solid $gray;
+  border-radius: 12px;
+
+  transition: 0.3s ease;
+  
+  &:focus {
+    padding: 10px 10px 10px 40px;
+  }
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 15%;
+  left: 10px;
+}
+
+
+.filtersWrap {
+  @include flex(flex-start, center, row, 40px)
+} 
+
+.selected {
+  box-shadow: $box-shadow;
+
+  pointer-events: none;
+}

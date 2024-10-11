@@ -1,0 +1,11 @@
+.SimilarPrompts {
+  position: relative;
+
+  @include flex(null, null, column, 70px);
+  @include montserrat(35px, 600, 40px);
+  padding: 60px 30px 80px;
+}
+
+.title {
+  margin-bottom: 80px;
+}

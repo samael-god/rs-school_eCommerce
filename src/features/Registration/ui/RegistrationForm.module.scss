@@ -1,0 +1,111 @@
+@import '@/app/styles';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 5vw, 30px);
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  @include montserrat(40px, 700, 42px)
+}
+
+.subtitle,
+.link {
+  text-align: center;
+
+  @include montserrat(15px, 400, 24px)
+}
+
+.link {
+  margin-left: 5px;
+
+  color: $light-green;
+}
+
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.input__wrapper.checkbox__wrapper {
+  flex-direction: row;
+}
+
+input.invalid {
+  border-color: $red !important;
+}
+
+.field__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 5vw, 30px);
+  width: 100%;
+  padding: 20px 10px;
+  border: 2px solid #cbcbcb;
+}
+
+.field__heading {
+  @include montserrat(clamp(25px, 5vw, 30px), 400, 24px);
+}
+
+.input__date {
+  color-scheme: dark;
+}
+
+.label__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+  border-radius: 10px;
+
+  font-size: clamp(15px, 4vw, 20px);
+
+  text-align: center;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  transition: .5s;
+}
+
+.label__checkbox:not(.label__checkbox_checked):hover{
+  background-color: rgb(57 181 74 / 20%);
+}
+
+.label__checkbox_checked {
+  background-color: rgb(57 181 74 / 50%);
+
+  transition: .5s;
+}
+
+.input__checkbox{
+  display: none;
+}
+
+.blocked {
+  opacity: .4;
+
+  pointer-events: none;
+}
+
+.eye_icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    fill: $light-green
+  }
+}

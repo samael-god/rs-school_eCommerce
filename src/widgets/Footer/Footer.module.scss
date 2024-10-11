@@ -1,0 +1,52 @@
+.socialMedia {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(closest-side, rgba($black, 0), rgba($black, 1));
+
+    content: "";
+  }
+
+  .videoBackground {
+    object-fit: cover;
+  }
+
+  p {
+    position: absolute;
+    top: 30%;
+
+    text-align: center;
+
+    @include montserrat(23px, 500, 24px);
+  }
+
+  .iconWrapper {
+    position: absolute;
+    top: 50%;
+
+    display: flex;
+
+    gap: clamp(30px, 8vw, 120px);
+
+    .icon {
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

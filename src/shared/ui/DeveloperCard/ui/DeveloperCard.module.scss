@@ -1,0 +1,135 @@
+
+.text__wrapper{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 300px;
+}
+
+.developerCard {
+  display: flex;
+  gap: 20px;
+  align-self: center;
+  padding: 30px;
+
+  font-size: .9em;
+
+  animation: reverse-scrolling linear both;
+  animation-timeline: view(block);
+  animation-range: cover 10% contain 50%;
+
+  &.revert{
+    animation: scrolling linear both;
+    animation-timeline: view(block);
+    animation-range: cover 10% contain 50%;
+
+
+    @media screen and (width >= 801px) {
+      flex-direction: row-reverse;      
+
+      & .text__wrapper{
+        text-align: right;
+      }
+
+      & .img__wrapper{
+        transform: rotate(2deg);
+      }
+    }
+    
+
+  }
+
+  .img{
+    width: 100%;
+
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+  }
+
+  @media screen and (width <= 800px){
+    &{
+      flex-direction: column;
+
+      .revert{
+        text-align: left;
+      }
+
+      .img__wrapper{
+        width: 100%;
+        max-width: 500px;
+       
+      }
+    }
+  }
+}
+
+.img__wrapper{
+  width: 30%;
+  min-width: 250px;
+  margin: 0 auto;
+
+  transform: rotate(-2deg);
+
+  @media screen and (width <= 800px){
+    &{
+        transform: rotate(0deg);
+    }
+  }
+}
+
+.name {
+  color: $green;
+  font-size: 1.2em;
+}
+
+.position {
+  font-style: italic;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+
+  transition: .3s;
+
+  &:hover{
+    color: white;
+
+    transition: .3s;
+  }
+}
+
+@keyframes scrolling {
+  from {
+    transform: translate(-50%);
+
+    opacity: .3;
+    scale: .6;
+  }
+
+  to {
+    transform: translate(0);
+
+    opacity: 1;
+    scale: 1;
+  }
+
+}
+
+@keyframes reverse-scrolling {
+  from {
+    transform: translate(50%);
+
+    opacity: .3;
+    scale: .6;
+  }
+
+  to {
+    transform: translate(0);
+
+    opacity: 1;
+    scale: 1;
+  }
+
+}

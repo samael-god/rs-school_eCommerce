@@ -1,0 +1,143 @@
+.FilterItem {
+  position: relative;
+
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.header {
+  padding: 14px 30px 14px 14px;
+  border: none;
+  border: 3px solid $gray;
+  border-radius: 13px;
+  
+  background: transparent;
+  cursor: pointer;
+  
+  @include montserrat(24px, 400, 28px);
+  transition: 0.3s ease;
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+
+  &:focus {
+    border-color: $green;
+  }
+}
+
+.arrow {
+  position: absolute;
+  right: 9px;
+
+  border-style: solid;
+  border-width: 7px;
+
+  transform: translateY(-50%);
+}
+
+.arrow_down {
+  top: 60%;
+
+  border-color: $gray transparent transparent;
+}
+
+.arrow_up {
+  top: 40%;
+
+  border-color: transparent transparent $gray;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  z-index: 3;
+
+  width: 280px;
+  min-width: 255px;
+  max-height: 290px;
+  margin-top: 0;
+  padding: 50px 15px 20px;
+  border: 3px solid $gray;
+  border-radius: 8px;
+  overflow-y: auto;
+
+  @include montserrat(20px, 400, 20px);
+
+  background: rgb(23 23 22 / 80%);
+  box-shadow: 0 0 0 1px #0000000d, 0 10px 15px #0000004d;
+  backdrop-filter: blur(7px);
+}
+
+.hidden {
+  display: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+.label {
+  @include flex(space-between, center, row);
+  text-align: start;
+
+  cursor: pointer;
+
+  @include montserrat(20px, 400, 20px);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+
+  width: 25px;
+  height: 25px;
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.close span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: white;
+}
+
+.close span:nth-of-type(1) {
+  transform: translate(-50%) rotate(45deg);
+}
+
+.close span:nth-of-type(2) {
+  transform: translate(-50%) rotate(-45deg);
+}
+
+.price_filters {
+  @include flex(space-between, center, row, 15px);
+  margin-bottom: 40px;
+}
+
+.dollar {
+  position: absolute;
+  right: 0;
+}
+
+.rangeInput {
+  margin-bottom: 20px;
+}
+
+.selectedRange {
+  @include flex(space-between, center);
+}

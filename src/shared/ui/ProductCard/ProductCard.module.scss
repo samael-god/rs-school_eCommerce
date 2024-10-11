@@ -1,0 +1,54 @@
+.card {
+  margin-bottom: 25px;
+}
+
+.ProductCard {
+  @include montserrat(16px, 400, 20px);
+  max-width: 220px;
+  padding: 0;
+  border: none;
+  border-radius: 13px;
+
+  text-align: start;
+
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+
+  
+  &:hover {
+    .card {
+      box-shadow: $box-shadow;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 100%;
+}
+
+.wrap {
+  display: flex;
+  gap: 12px;
+}
+
+.sale {
+  color: $green;
+}
+
+.salePrice {
+  color: $gray;
+  text-decoration: line-through;
+}
+
+.stars_wrap {
+  display: flex;
+  gap: 3px;
+}
+
+.reviews {
+  color: $gray;
+}

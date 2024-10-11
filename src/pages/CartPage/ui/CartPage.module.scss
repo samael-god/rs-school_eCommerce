@@ -1,0 +1,180 @@
+.wrapper {
+  display: block;
+  height: 100%;
+
+  background-color: $black;
+}
+
+.productsWrapper {
+  @include flex(null, null, column);
+  z-index: 1;
+
+  flex: 1 1;
+  max-width: 100%;
+}
+
+.main {
+  position: relative;
+
+  flex-wrap: wrap;
+  min-height: calc(100vh - 143px - 384px);
+  padding: 10px;
+
+  background-color: $black;
+
+  @include flex(null, null, row, 30px);
+
+  .plantImageTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    max-width: 350px;
+  }
+
+  .plantImageBottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+}
+
+.clearButton {
+  align-self: flex-end;
+  padding: 0;
+  border: none;
+
+  color: $green;
+  text-decoration: none;
+
+  background: none;
+  cursor: pointer;
+
+  @include montserrat(15px, 400, 30px);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.invoiceWrapper {
+  z-index: 1;
+
+  width: 370px;
+  height: fit-content;
+  padding: 20px 15px 15px 30px;
+  border: 1px solid $green;
+
+  @include flex(null, null, column, 30px);
+
+  .invoiceTitle {
+    @include montserrat(30px, 400, 35px);
+  }
+}
+
+.emptyCartWrapper {
+  @include flex(center, center, column);
+  width: 100%;
+  padding: 2rem;
+
+  text-align: center;
+}
+
+.emptyCartImage {
+  width: 250px;
+  margin-bottom: 1rem;
+}
+
+.emptyCartText {
+  @include montserrat(25px, 400, 30px);
+
+  .catalogLink {
+    color: $green;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.priceWrapper {
+  @include flex(null, null, column, 20px);
+
+  .originalPrice {
+    @include montserrat(15px, 500, 25px);
+    text-decoration: line-through
+  }
+
+  .priceFlex {
+    @include flex(space-between, center, 10px);
+  }
+
+  .price {
+    @include montserrat(25px, 500, 30px);
+    color: $green;
+  }
+
+  .discount {
+    @include montserrat(20px, 500, 30px);
+    text-shadow: 0 0 15px rgba($green, 2.5);
+  }
+}
+
+.promoCodeView {
+  @include flex(space-between, center, row, 10px);
+  flex-wrap: wrap;
+}
+
+.promoCodeInput {
+  @include montserrat(16px, 400, 20px);
+}
+
+.label {
+  width: 156px;
+}
+
+.applyPromoCodeButton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+
+  color: $black;
+
+  @include montserrat(15px, 500, 20px);
+
+  background-color: $green;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    color: white;
+
+    background-color: #39b54a90;
+  }
+
+  &:disabled {
+    background-color: $gray;
+    cursor: not-allowed;
+  }
+}
+
+.Modal {
+  transform: translate(-50%, -1000%);
+}
+
+.active {
+  transform: translateX(-50%);
+}
+
+.buttonsWrap {
+  @include flex(space-between, center, row, 10px);
+
+  button {
+    width: 100px;
+  }
+}

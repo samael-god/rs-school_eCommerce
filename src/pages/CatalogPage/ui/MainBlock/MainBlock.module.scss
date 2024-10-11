@@ -1,0 +1,124 @@
+.MainBlock {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  padding: 20px 30px 80px;
+}
+
+.list {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  @include montserrat(20px, 400, 24px);
+}
+
+.separator {
+  width: 1px;
+  height: 300px;
+  margin: 0 60px 0 10px ;
+
+  background-color: white;
+}
+
+.item {
+  color: white;
+
+  &::after {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+
+    width: 0;
+    height: 1px;
+
+    background-color: white;
+    transform: translateX(-50%);
+
+    transition: 0.3s ease;
+
+    content: '';
+  }
+
+  &:hover {
+    opacity: 1;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.card {
+  flex-direction: row;
+  min-height: 251px;
+}
+
+.image {
+  width: 200px;
+  border-radius: 13px;
+}
+
+.title {
+  color: $green;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: start;
+}
+
+.subtitle {
+  font-weight: 700;
+  text-align: start;
+}
+
+.link {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.text_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  margin: auto;
+
+  text-align: center;
+}
+
+.mainBlock_slider {
+  width: 60%;
+  padding-bottom: 20px;
+}
+
+@media screen and (width <= 700px) {
+  .MainBlock {
+    @include flex(center, center, column)
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .mainBlock_slider {
+    width: 100%
+  }
+}
+
+@media screen and (width <= 450px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    min-height: 398px;
+  }
+}

@@ -1,0 +1,73 @@
+.buttonEdit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  display: none;
+  border: none;
+
+  background: transparent;
+  cursor: pointer;
+}
+
+.iconWrapper{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  display: none;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.closeIcon {
+  transition: .2s;
+
+  fill: white;
+
+  &:hover{
+    cursor: pointer;
+
+    transition: .2s;
+
+    fill: red;
+  }
+}
+
+.iconEdit {
+  fill: white;
+
+  &:hover {
+    cursor: pointer;
+
+    transition: .3s;
+
+    fill: $light-green;
+  }
+}
+
+.addressCard {
+  position: relative;
+
+  padding: 20px;
+
+  border: 1px solid white;
+
+  p {
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.addressCard:hover{
+  .iconWrapper {
+    display: flex;
+  }
+}
+
+.defaultAddress{
+  border-color: $light-green;
+  border-width: 2px;
+}

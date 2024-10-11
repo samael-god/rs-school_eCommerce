@@ -1,0 +1,185 @@
+.productCard {
+  @include flex(null, null, row, 10px);
+  position: relative;
+
+  flex-wrap: wrap;
+
+  .productData {
+    @include flex(null, null, column, 30px);
+    z-index: 1;
+
+    flex: 1 1 400px;
+    padding-left: 5px;
+
+    .productName {
+      @include montserrat(35px, 600, 40px);
+    }
+
+    .productDescription {
+      @include montserrat(16px, 500, 20px);
+      padding: 10px;
+    }
+
+    .price {
+      @include montserrat(30px, 600, 40px);
+      padding: 0 20px;
+      border: 1px solid white;
+      border-radius: 50px;
+    }
+
+    .crossed {
+      @include montserrat(20px, 600, 40px);
+      border: none;
+
+      color: $gray;
+      text-decoration: line-through;
+    }
+
+    .discountedPrice {
+      color: $green;
+    }
+  }
+
+}
+
+.plantImage {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+
+.buttonsWrapper {
+  @include flex(flex-start, center, row, 30px);
+  width: 350px;
+}
+
+.priceWrapper {
+  @include flex(space-between, center, row, 30px);
+  width: 350px;
+}
+
+.buyButtons {
+  @include montserrat(20px, 600, 25px);
+  width: 160px;
+  height: 50px;
+
+  color: white;
+}
+
+.modalImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.modal {
+  position: relative;
+
+  align-self: center;
+  width: fit-content;
+}
+
+.modalImage {
+  width: 60vw;
+
+  @media (width <=700px) {
+    width: 85vw;
+  }
+}
+
+.modalWrap {
+  @include flex(center, center)
+}
+
+.modalButtonNext {
+  top: 10px;
+  left: 60px;
+}
+
+.modalButtonPrev {
+  top: 10px;
+  left: 10px;
+}
+
+.modalButtonPrev,
+.modalButtonNext {
+  position: absolute;
+
+  padding: 10px;
+  border-color: $green;
+  border-radius: 50%;
+
+  background-color: white;
+
+  svg * {
+
+    stroke: $green;
+  }
+
+  &:hover,
+  &:active {
+    border-color: $green !important;
+
+    background-color: $green !important;
+
+    svg * {
+
+      stroke: white;
+    }
+  }
+}
+
+
+.imageWrapperButton {
+  width: 300px;
+  height: fit-content;
+  margin-left: 35px;
+  padding: 0;
+  border-radius: 20px;
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+}
+
+.linkAsButton {
+  @include flex(center, center);
+  @include montserrat(20px, 600, 25px);
+  align-self: center;
+  width: 160px;
+  height: 50px;
+  padding: 20px 30px;
+  border: none;
+
+
+  border-radius: 13px;
+
+  color: white;
+
+  text-align: center;
+  text-decoration: none;
+
+  background-color: $green;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    color: $black;
+
+    opacity: 0.7;
+  }
+}
+
+.imageCard {
+  position: relative;
+  z-index: 1;
+
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.none {
+  display: none;
+}

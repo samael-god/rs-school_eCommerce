@@ -1,0 +1,31 @@
+.addressesWrapper {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.addMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+
+  background: transparent;
+
+  transition: .2s;
+
+  &:hover{
+    border-color: $light-green;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+    .icon {
+      transition: .2s;
+
+      fill: $light-green;
+    }
+  }
+}

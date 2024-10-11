@@ -1,0 +1,25 @@
+.selected_items {
+  @include flex(flex-start, center, row, 20px);
+  
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.selected {
+  @include montserrat(20px, 400, 20px);
+  z-index: 2;
+
+  padding: 10px;
+  border: 2px solid $gray;
+  border-radius: 13px;
+
+  @include flex(space-between, center, row, 15px);
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.reset {
+  border-color: $red;
+}

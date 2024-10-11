@@ -1,0 +1,19 @@
+.wrapper {
+
+  padding: 20px 30px;
+
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+
+.icon__filled {
+  margin-right: 10px;
+
+  fill: $green;
+}

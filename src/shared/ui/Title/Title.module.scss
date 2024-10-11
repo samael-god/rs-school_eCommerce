@@ -1,0 +1,29 @@
+.Title {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: clamp(40px, 10vw, 80px);
+
+  &::before {
+    position: absolute;
+
+    width: 20px;
+    height: 40px;
+    border-radius: 10px;
+
+    background-color: $green;
+
+    content: ''
+  }
+}
+
+.subtitle {
+  @include montserrat(32px, 400, 40px);
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+
+.title {
+  @include montserrat(clamp(63px, 10vw, 80px), 700, clamp(63px, 10vw, 80px));
+  color: $green;
+}

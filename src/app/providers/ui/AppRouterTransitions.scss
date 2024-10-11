@@ -1,0 +1,29 @@
+#root {
+  background-color: $black;
+}
+
+// Вариант с появлением:
+
+.page-enter {
+  transform: scaleX(80%);
+  opacity: 0;
+}
+
+.page-enter-active {
+  transform: scaleX(100%);
+  opacity: 1;
+
+  transition: all 200ms
+}
+
+.page-exit {
+  transform: scaleX(100%);
+  opacity: 1;
+}
+
+.page-exit-active {
+  transform: scaleX(80%);
+  opacity: 0;
+
+  transition: all 200ms;
+}

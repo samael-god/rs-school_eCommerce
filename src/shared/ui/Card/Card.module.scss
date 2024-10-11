@@ -1,0 +1,47 @@
+.Card {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  border: 0.5px solid #898989;
+  border-radius: 13px;
+
+  text-align: center;
+
+  background: linear-gradient(.47turn, #3f3d3d 0%, $black 70%);
+
+  backdrop-filter: blur(3px);
+
+  transition: 0.3s ease;
+
+  @include montserrat(30px, 500, 33px); 
+}
+
+.image {
+  width: 100%;
+  border-radius: 13px
+}
+
+.green {
+  @include montserrat(33px, 700, 35px);
+  color: $green;
+}
+
+.transparent {
+  background: none;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.hovered {
+  &:hover {
+    box-shadow: $box-shadow;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,19 @@
+.logo {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+
+  transition: .3s;
+
+  &:hover {
+    transform: rotate(10deg);
+
+    transition: .3s;
+  }
+}
+
+.left {
+  align-self: flex-start;
+}

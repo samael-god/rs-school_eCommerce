@@ -1,0 +1,50 @@
+.label {
+  position: relative;
+  top: 0;
+
+  display: block;
+  width: 100%;
+
+  color: white;
+  font-size: 1rem;
+
+  @include montserrat(clamp(20px, 5vw, 25px), 500, 24px);
+
+  transition: 0.2s;
+}
+
+.select {
+  @include montserrat(20px, 500, 24px);
+  width: 100%;
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 2px solid $gray;
+
+  color: $gray;
+
+  background: transparent;
+  outline: 0;
+
+  transition: border-color 0.2s;
+
+  &:required,&:invalid { box-shadow:none; }
+}
+
+.select:focus {
+  padding-bottom: 6px;
+  border-color: $green;
+  border-width: 3px;
+  border-image-slice: 1;
+}
+
+.option {
+  color: black;
+
+  cursor: pointer;
+}
+
+.select::before, .select::after {
+  color: $gray;
+
+  background-color: $gray;
+}

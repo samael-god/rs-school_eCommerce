@@ -1,0 +1,113 @@
+.ProductCard {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(0px, 2vw, 15px);
+  border-bottom: 1px solid $green;
+
+
+  .imageAndNameWrapper {
+    @include flex(null, null, row, clamp(5px, 2vw, 30px));
+    backdrop-filter: blur(3px);
+
+    .productImage {
+      width: 100px;
+      height: 100px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    .nameAndPriceWrapper {
+      .productName {
+        width: 250px;
+        margin-bottom: 0.5rem;
+
+        @include montserrat(20px, 400, 25px);
+      }
+
+      .productPrice {
+        @include montserrat(20px, 400, 25px);
+        @include flex(flex-start, center, row, 15px);
+        width: 150px;
+        margin-bottom: 0.5rem;
+
+        .originalPrice {
+          margin-right: 0.5rem;
+
+          color: $gray;
+          text-decoration: line-through;
+        }
+
+        .discountPrice {
+          color: $green;
+          font-weight: bold;
+        }
+
+        .price {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .productDetails {
+    @include flex(null, null, row, 30px);
+
+    .productQuantity {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      .quantityButton {
+        border: none;
+        border-radius: 50%;
+
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .quantityInput {
+        width: 3rem;
+        border: none;
+
+        color: $green;
+
+        text-align: center;
+
+        @include montserrat(20px, 400, 20px);
+      }
+    }
+
+    .totalPriceWrapper {
+      @include montserrat(25px, 400, 25px);
+      @include flex(flex-start, center, column, 15px);
+      width: 73px;
+
+      .totalPrice {
+        color: $green;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .removeButton {
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+
+    justify-self: flex-end;
+    width: 16px;
+    padding: 0;
+    border: none;
+
+    background: none;
+    cursor: pointer
+  }
+}
+
+.loader {
+  width: 25px;
+}

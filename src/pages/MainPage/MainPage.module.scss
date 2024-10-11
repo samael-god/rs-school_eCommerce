@@ -1,0 +1,202 @@
+.MainPage {
+  background-color: $black;
+}
+
+.mainBlock {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 50px;
+  padding: clamp(130px, 13vw, 198px) clamp(15px, 4vw, 90px);
+
+  .title {
+    @include montserrat(80px, 700, 84px);
+  }
+
+  .subtitle {
+    @include montserrat(clamp(80px, 15vw, 140px), 700, clamp(130px, 15vw, 180px));
+    margin-bottom: 50px;
+
+    color: $green;
+  }
+
+  .mainLeaf {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: -1;
+
+    transform: translateY(-50%);
+    mask-image: linear-gradient(to bottom, $black 40%, transparent);
+    filter: brightness(80%);
+  }
+}
+
+.linkAsButton {
+  align-self: center;
+  width: clamp(180px, 100%, 240px);
+  padding: 20px 30px;
+  border: none;
+
+  border: 0.5px solid #898989;
+  border-radius: 11px;
+
+  color: $green;
+  text-align: center;
+  text-decoration: none;
+
+  background: linear-gradient(.47turn, #3f3d3d 0%, $black 100%);
+
+  background-color: $green;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  @include montserrat(28px, 500, 32px);
+
+  &:hover {
+    color: white;
+
+    opacity: 0.7;
+  }
+}
+
+.infoBlock {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding: clamp(50px, 30vw, 300px) 30px;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 185px;
+
+    background: linear-gradient(to top, $black, transparent);
+
+    content: '';
+  }
+
+  .infoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: brightness(60%);
+    mask-image: url('../../shared/assets/images/mask.svg');
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+  }
+}
+
+.addInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.question {
+  @include montserrat(clamp(40px, 5vw, 80px), 700, 84px);
+  color: $green;
+  text-align: center;
+}
+
+.benefitsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+
+  .ecological-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: center;
+
+    .oneBenefit {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      width: 205px;
+
+      text-align: center;
+
+      p {
+        @include montserrat(clamp 16px, 500, 20px);
+      }
+    }
+  }
+}
+
+.featuredProducts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  text-align: center;
+
+  background: radial-gradient(closest-side, rgba($black, 0), rgba($black, 1)),
+    url('../../shared/assets/images/products_back.webp');
+  background-position: center;
+  background-size: cover;
+
+  .products {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .productsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+@media screen and (width <=440px) {
+  .infoBlock {
+    .infoBackground {
+      mask-size: unset;
+    }
+  }
+}
+
+.promoCodes {
+  max-width: 100%;
+
+  @include flex(center, center, column, 30px);
+  padding: 10px;
+}
+
+.promoCodesTitle {
+  @include montserrat(50px, 700, 60px);
+  color: $green;
+}
+
+.descriptionWrapper {
+  @include flex(center, center, column, 30px);
+}
+
+.promoCodeName {
+  @include montserrat(40px, 600, 50px);
+  color: $green;
+  text-shadow: 0 0 10px rgb(0 255 0 / 70%);
+}
+
+.promoCodesDescription {
+  @include montserrat(35px, 600, 50px);
+}

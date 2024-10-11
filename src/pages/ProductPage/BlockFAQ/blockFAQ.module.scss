@@ -1,0 +1,56 @@
+.faqWrapper {
+  position: relative;
+
+  @include flex(center, center, column, 30px);
+  z-index: 1;
+
+  max-width: 100%;
+  margin-left: 35px;
+
+  .plantImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+
+    width: 380px;
+  }
+}
+
+.faqTitle {
+  @include montserrat(35px, 600, 40px);
+}
+
+.faqItemTitle {
+  position: relative;
+  z-index: 1;
+
+  width: clamp(300px, 80vw, 1200px);
+  padding: 10px 40px;
+  border: 0.5px solid #898989;
+  border-radius: 5px;
+
+  text-align: start;
+
+  background: linear-gradient(.47turn, #3f3d3d90 0%, #17171695 70%);
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+
+  user-select: none;
+
+  @include montserrat(28px, 400, 30px);
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+}
+
+.faqItemAnswer {
+  position: relative;
+  z-index: 1;
+
+  width: clamp(300px, 80vw, 1200px);
+  margin-top: 0.5rem;
+
+  @include montserrat(20px, 400, 35px);
+}

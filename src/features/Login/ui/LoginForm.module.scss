@@ -1,0 +1,66 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  @include montserrat(40px, 700, 42px)
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 66px;
+}
+
+.subtitle,
+.link {
+  text-align: center;
+
+  @include montserrat(15px, 400, 24px)
+}
+
+.link {
+  margin-left: 5px;
+
+  color: $light-green;
+}
+
+.input {
+  margin-bottom: 37px;
+}
+
+.eye_icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-70%);
+  cursor: pointer;
+  
+  transition: 0.3s ease;
+  
+  &:hover {
+    fill: $light-green
+  }
+}
+
+.button {
+  margin-top: 15px;
+}
+
+.error{
+  transform: translateY(-25px)
+}
+
+.invalid{
+  border-color: $red;
+
+  &:focus{
+    border-color: $red;
+  }
+}

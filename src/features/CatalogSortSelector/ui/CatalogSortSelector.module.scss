@@ -1,0 +1,22 @@
+.CatalogSortSelector {
+  @include flex(flex-start, center, row, 40px);
+}
+
+.title {
+  @include montserrat(24px, 400, 28px); 
+}
+
+.select {
+  min-width: fit-content;
+  padding: 6px;
+  border: 3px solid $gray;
+  border-radius: 13px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+}

@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.buttonBack {
+  @include flex(center, flex-start);
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  border: 1px solid $green;
+  border-left: none;
+  border-radius: 0 50px 50px 0;
+
+  font-size: 20px;
+
+  background-color: transparent;
+}
+
+.SimilarPrompts {
+  z-index: 1;
+
+  margin-left: 35px;
+}
+
+.similarTitle {
+  @include montserrat(35px, 600, 40px);
+}

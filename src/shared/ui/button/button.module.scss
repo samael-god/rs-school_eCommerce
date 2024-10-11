@@ -1,0 +1,49 @@
+.button {
+  @include flex(space-around, center);
+  width: clamp(180px, 100%, 240px);
+  height: 66px;
+  border: none;
+  border-radius: 11px;
+
+  color: black;
+
+  background-color: $green;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  @include montserrat(23px, 500, 24px);
+
+  &:disabled {
+    background: gray;
+    cursor: default;
+  }
+
+  &:enabled:hover {
+    color: white;
+
+    opacity: 0.7;
+  }
+}
+
+.transparent {
+  border: 0.5px solid #898989;
+
+  background: linear-gradient(.47turn, #3f3d3d 0%, $black 70%);
+
+}
+
+.green {
+  color: $green;
+}
+
+.small {
+  width: 160px;
+  height: 45px;
+
+  @include montserrat(17px, 400, 20px);
+}
+
+.cancel {
+  background-color: $red;
+}

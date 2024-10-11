@@ -1,0 +1,70 @@
+body,
+* {
+  box-sizing: border-box;
+
+  color: white;
+  font-family: Montserrat, sans-serif;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.slick-dots li button::before {
+  content: ''
+}
+
+.slick-dots li button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+
+  background-color: white;
+}
+
+.slick-dots li.slick-active button {
+  background-color: $green;
+}
+
+.slick-next::before,
+.slick-prev::before {
+  display: none;
+}
+
+.slick-disabled {
+  cursor: auto;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+}
+
+.slick-list {
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+
+  background: #fff;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.range-slider .range-slider__thumb,
+.range-slider .range-slider__range {
+  background: $green;
+}
